@@ -224,7 +224,7 @@
         <div class="row"><div class="ic">📍</div><div><b>Address</b><span>Sector 36-G, Pak Muslim Burmees Colony,<br>Landhi Town, Karachi</span></div></div>
         <div class="row"><div class="ic">🕔</div><div style="flex:1"><b>Timings</b>
           <table class="hours" id="hours">
-            <tr data-d="1"><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+            <tr data-d="1"><td>Monday</td><td>5:00 PM – 4:00 AM</td></tr>
             <tr data-d="2"><td>Tuesday</td><td>5:00 PM – 4:00 AM</td></tr>
             <tr data-d="3"><td>Wednesday</td><td>5:00 PM – 4:00 AM</td></tr>
             <tr data-d="4"><td>Thursday</td><td>5:00 PM – 4:00 AM</td></tr>
@@ -256,10 +256,9 @@
     const days = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
     const d = days[parts.find(p=>p.type==='weekday').value];
     const h = Number(parts.find(p=>p.type==='hour').value) % 24;
-    const prev = (d+6)%7;
-    const open = (d===1 && h>=9 && h<17) || (d!==1 && h>=17) || (h<4 && prev!==1);
+    const open = h>=17 || h<4;
     document.getElementById('dot').classList.toggle('on', open);
-    document.getElementById('liveTxt').textContent = open ? 'Abhi open hai · till 4 AM' : 'Abhi band hai · ' + (d===1 && h<9 ? 'aaj 9 AM' : '5 PM') + ' par khulega';
+    document.getElementById('liveTxt').textContent = open ? 'Abhi open hai · till 4 AM' : 'Abhi band hai · 5 PM par khulega';
     const row = document.querySelector('#hours tr[data-d="'+d+'"]'); if(row) row.classList.add('today');
   })();
   const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
