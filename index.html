@@ -34,7 +34,7 @@
   .btn-fire{background:var(--fire);color:#fff;box-shadow:0 8px 24px rgba(255,77,28,.35)}
   .btn-wa{background:var(--green);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.3)}
   .btn-line{border:2px solid var(--cream)}
-  .nav-cta{padding:9px 16px;font-size:.88rem}
+  .nav-cta{padding:9px 16px;font-size:.88rem;white-space:nowrap}
   @media(max-width:760px){.links a:not(.btn){display:none}}
 
   /* hero */
@@ -83,6 +83,19 @@
   .item h4{font-weight:600;font-size:1rem}
   .item .dots{flex:1}
   .item .price{color:var(--amber);font-weight:700;white-space:nowrap}
+  .pz-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;margin-top:44px;align-items:start}
+  .pz h3,.mcat h3{font-size:1.7rem;color:var(--amber);margin-bottom:10px}
+  .tbl{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .tbl table{width:100%;border-collapse:collapse}
+  .tbl th,.tbl td{padding:12px 14px;text-align:right;border-bottom:1px dashed var(--line)}
+  .tbl th{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+  .tbl th:first-child,.tbl td:first-child{text-align:left}
+  .tbl td{color:var(--amber);font-weight:700;white-space:nowrap}
+  .tbl td b{color:var(--cream);font-weight:600}
+  .tbl td:first-child{white-space:normal}
+  .tbl tbody tr:last-child td{border-bottom:none}
+  .sp{display:inline-block;background:var(--fire);color:#fff;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em;vertical-align:middle;margin-left:4px}
+  @media(max-width:860px){.pz-grid{grid-template-columns:1fr}}
   .note{margin-top:28px;color:var(--muted);font-size:.9rem}
 
   .visit{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;margin-top:44px}
@@ -93,7 +106,7 @@
   .row b{display:block}
   .row span,.row a{color:var(--muted);text-decoration:none}
   .hours{width:100%;font-size:.92rem;color:var(--muted);margin-top:4px}
-  .hours td{padding:2px 0}.hours td:last-child{text-align:right}
+  .hours td{padding:2px 0}.hours td:last-child{text-align:right;white-space:nowrap}
   .hours tr.today td{color:var(--amber);font-weight:700}
   .info .ctas{margin-top:20px}
   .map{border-radius:20px;overflow:hidden;border:1px solid var(--line);min-height:400px}
@@ -112,6 +125,8 @@
     .logo .nm small{display:none}
     .stats{gap:18px}.stats b{font-size:1.4rem}
     .hero h1{font-size:3.2rem}
+    .hours{font-size:.82rem}.logo .nm{font-size:.85rem}
+    .tbl th,.tbl td{padding:10px 6px;font-size:.82rem}.tbl th{font-size:.62rem}.tbl th:first-child,.tbl td:first-child{padding-left:12px}.tbl th:last-child,.tbl td:last-child{padding-right:12px}
   }
 </style>
 </head>
@@ -142,7 +157,7 @@
       <div class="stats">
         <div><b>4.2 ★</b><small>Google rating</small></div>
         <div><b>5PM–4AM</b><small>Late night</small></div>
-        <div><b>36-G</b><small>Landhi</small></div>
+        <div><b>Rs 150+</b><small>Rolls from</small></div>
       </div>
     </div>
     <div class="burger" aria-hidden="true">
@@ -173,8 +188,8 @@
 </header>
 
 <div class="ticker"><div>
-  <span>🍔 ZINGER BURGER</span><span>🍕 CHICKEN SUPREME PIZZA</span><span>🔥 BIHARI BOTI</span><span>🧀 BEEF CHEESE BURGER</span><span>🌙 OPEN TILL 4 AM</span><span>🥫 IMLI KI CHUTNEY</span>
-  <span>🍔 ZINGER BURGER</span><span>🍕 CHICKEN SUPREME PIZZA</span><span>🔥 BIHARI BOTI</span><span>🧀 BEEF CHEESE BURGER</span><span>🌙 OPEN TILL 4 AM</span><span>🥫 IMLI KI CHUTNEY</span>
+  <span>🍔 ZINGER BURGER</span><span>🍕 SUPREME PIZZA</span><span>🔥 BIHARI BOTI</span><span>🧀 BEEF CHEESE BURGER</span><span>🌙 OPEN TILL 4 AM</span><span>🥫 IMLI KI CHUTNEY</span>
+  <span>🍔 ZINGER BURGER</span><span>🍕 SUPREME PIZZA</span><span>🔥 BIHARI BOTI</span><span>🧀 BEEF CHEESE BURGER</span><span>🌙 OPEN TILL 4 AM</span><span>🥫 IMLI KI CHUTNEY</span>
 </div></div>
 
 <section id="specials">
@@ -185,7 +200,7 @@
     <div class="cards">
       <div class="card reveal"><span class="badge">Hit</span><span class="em">🍔</span><h3>Zinger Burger</h3><p>Crispy fried chicken fillet, fresh salad aur special sauce, soft bun mein.</p></div>
       <div class="card reveal"><span class="em">🧀</span><h3>Beef Cheese Burger</h3><p>Juicy beef patty upar se pighla hua cheese — pet bhar dene wala burger.</p></div>
-      <div class="card reveal"><span class="badge">Large</span><span class="em">🍕</span><h3>Chicken Supreme Pizza</h3><p>Chicken, sabziyan aur double cheese — dosto aur family ke saath share karein.</p></div>
+      <div class="card reveal"><span class="badge">GFC Special</span><span class="em">🍕</span><h3>Supreme Pizza</h3><p>Malai Boti, Afghani, Arabian aur Kabab Stuffing — hamari special pizzas, Rs 300 se shuru.</p></div>
       <div class="card reveal"><span class="em">🔥</span><h3>Bihari Boti</h3><p>Masaledar, koylon par bani narm boti — saath mein hamari imli ki chutney.</p></div>
     </div>
   </div>
@@ -196,25 +211,7 @@
     <span class="eyebrow">Menu</span>
     <h2 class="sec-title reveal">Menu & Prices</h2>
     <p class="sec-sub reveal">Dine in, takeaway ya home delivery — call ya WhatsApp karein.</p>
-    <div class="menu-cols">
-      <div class="mcat reveal"><h3>Burgers</h3>
-        <div class="item"><h4>Zinger Burger</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Beef Cheese Burger</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Chicken Burger</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-      </div>
-      <div class="mcat reveal"><h3>Pizza</h3>
-        <div class="item"><h4>Chicken Supreme — Small</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Chicken Supreme — Medium</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Chicken Supreme — Large</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-      </div>
-      <div class="mcat reveal"><h3>BBQ & Desi</h3>
-        <div class="item"><h4>Bihari Boti</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Puri</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Fries</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-        <div class="item"><h4>Cold Drink</h4><span class="dots"></span><span class="price">Rs ___</span></div>
-      </div>
-    </div>
-    <p class="note">* Prices badal sakti hain — order se pehle call kar ke confirm kar lein.</p>
+    <div class="pz-grid"><div class="pz reveal"><h3>Classic Pizza</h3><div class="tbl"><table><thead><tr><th>Rs</th><th>Small</th><th>Regular</th><th>Large</th></tr></thead><tbody><tr><td><b>Chicken Tikka</b></td><td>250</td><td>550</td><td>750</td></tr><tr><td><b>Chicken Fajita</b></td><td>250</td><td>550</td><td>750</td></tr><tr><td><b>Chatpata Pizza</b> <span class="sp">GFC Special</span></td><td>250</td><td>550</td><td>750</td></tr><tr><td><b>Chicken Cheesy Pizza</b></td><td>250</td><td>550</td><td>750</td></tr></tbody></table></div></div><div class="pz reveal"><h3>Supreme Pizza</h3><div class="tbl"><table><thead><tr><th>Rs</th><th>Small</th><th>Regular</th><th>Large</th></tr></thead><tbody><tr><td><b>Tikka Supreme</b></td><td>300</td><td>650</td><td>900</td></tr><tr><td><b>Fajita Supreme</b></td><td>300</td><td>650</td><td>900</td></tr><tr><td><b>Chicky Peri-Peri Supreme</b></td><td>300</td><td>650</td><td>900</td></tr><tr><td><b>Hot & Spicy Supreme</b></td><td>300</td><td>650</td><td>900</td></tr><tr><td><b>Malai Boti Supreme</b> <span class="sp">GFC Special</span></td><td>300</td><td>650</td><td>1,000</td></tr><tr><td><b>Chicken Super Supreme</b> <span class="sp">GFC Special</span></td><td>300</td><td>650</td><td>1,000</td></tr><tr><td><b>Afghani Supreme</b> <span class="sp">GFC Special</span></td><td>300</td><td>650</td><td>1,000</td></tr><tr><td><b>Arabian Supreme</b> <span class="sp">GFC Special</span></td><td>300</td><td>650</td><td>1,000</td></tr><tr><td><b>Kabab Stuffing Supreme</b> <span class="sp">GFC Special</span></td><td>500</td><td>1,000</td><td>1,500</td></tr></tbody></table></div></div></div><div class="menu-cols"><div class="mcat reveal"><h3>BBQ Tikka</h3><div class="item"><h4>Chicken Tikka Chest</h4><span class="dots"></span><span class="price">Rs 420</span></div><div class="item"><h4>Chicken Tikka Leg</h4><span class="dots"></span><span class="price">Rs 390</span></div><div class="item"><h4>Bihari Tikka Chest</h4><span class="dots"></span><span class="price">Rs 450</span></div><div class="item"><h4>Bihari Tikka Leg</h4><span class="dots"></span><span class="price">Rs 400</span></div><div class="item"><h4>Malai Tikka</h4><span class="dots"></span><span class="price">Rs 480</span></div></div><div class="mcat reveal"><h3>BBQ Boti</h3><div class="item"><h4>Chicken Boti Plate</h4><span class="dots"></span><span class="price">Rs 420</span></div><div class="item"><h4>Bihari Chicken Plate</h4><span class="dots"></span><span class="price">Rs 440</span></div><div class="item"><h4>Beef Bihari Boti Plate</h4><span class="dots"></span><span class="price">Rs 460</span></div><div class="item"><h4>Malai Boti Plate</h4><span class="dots"></span><span class="price">Rs 480</span></div></div><div class="mcat reveal"><h3>BBQ Kabab</h3><div class="item"><h4>Seekh Kabab</h4><span class="dots"></span><span class="price">Rs 420</span></div><div class="item"><h4>Gola Kabab</h4><span class="dots"></span><span class="price">Rs 420</span></div><div class="item"><h4>Reshmi Kabab</h4><span class="dots"></span><span class="price">Rs 420</span></div><div class="item"><h4>Chandan Kabab</h4><span class="dots"></span><span class="price">Rs 400</span></div></div><div class="mcat reveal"><h3>Rolls</h3><div class="item"><h4>Jumbo Zinger Roll</h4><span class="dots"></span><span class="price">Rs 280</span></div><div class="item"><h4>Mayo Garlic BBQ Roll</h4><span class="dots"></span><span class="price">Rs 220</span></div><div class="item"><h4>Malai Boti Roll</h4><span class="dots"></span><span class="price">Rs 220</span></div><div class="item"><h4>Beef Bihari Boti Roll</h4><span class="dots"></span><span class="price">Rs 220</span></div><div class="item"><h4>Chicken Chatni Roll</h4><span class="dots"></span><span class="price">Rs 190</span></div><div class="item"><h4>Seekh Kabab Roll</h4><span class="dots"></span><span class="price">Rs 180</span></div><div class="item"><h4>Fajita Roll</h4><span class="dots"></span><span class="price">Rs 170</span></div><div class="item"><h4>Zinger Roll</h4><span class="dots"></span><span class="price">Rs 150</span></div><div class="item"><h4>Mayo Zinger Roll</h4><span class="dots"></span><span class="price">Rs 150</span></div></div></div><p class="note">* Burgers, fries aur deals bhi dastiyab hain — rates ke liye call ya WhatsApp karein. Prices badal sakti hain, order se pehle confirm kar lein.</p>
   </div>
 </section>
 
